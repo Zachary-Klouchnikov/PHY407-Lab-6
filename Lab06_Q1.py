@@ -11,6 +11,23 @@ import matplotlib.pyplot as plt
 """
 FUNCTIONS
 """
+def rk4(xddot, xdot, x):
+    """Runge-Kutta 4th Order Method for solving ODEs.
+    
+    Arguments:
+    xddot -- equation of motion
+    xdot -- array for velocity values
+    x -- array for position values
+    """
+    h = x[1] - x[0]
+    for i in range(len(x)):
+        k_1 = h * xddot(x[i], xdot[i])
+        k_2 = h * xddot(x[i] + k_1 / 2, xdot[i] + h / 2)
+        k_3 = h * xddot(x[i] + k_2 / 2, xdot[i] + h / 2)
+        k_4 = h * xddot(x[i] + k_3, xdot[i] + h)
+        x[i + h] = (k_1 + 2 * k_2 + 2 * k_3 + k_4) / 6
+    
+    return x
 
 """
 PART A)
@@ -42,5 +59,12 @@ plt.ylabel("Force (N)", fontsize = 12)
 plt.legend(fontsize = 12)
 plt.grid()
 
+# Limits
+plt.xlim(0, 100)
+
 plt.savefig('Figures\\Total Absolute Frictional Force.pdf')
 plt.show()
+
+"""
+PART B)
+"""
