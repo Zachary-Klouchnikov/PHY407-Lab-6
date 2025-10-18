@@ -178,6 +178,12 @@ for i in range(N):
     amplitudes[i] = amplitude  #updating arrays
     phases[i] = phase
 
+print('Eigenvalues:', eigenvalues)
+print('Eigenvectors:', eigenvectors)
+print('Frequencies in rad/s:', frequencies)
+print('Frequencies in Hz:', frequencies /(2*np.pi))
+print('Amplitudes:', amplitudes)
+print('Phases:', phases)
 
 #plotting
 plt.figure(figsize=(8, 4))
