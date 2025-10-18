@@ -1,6 +1,7 @@
 __authors__ = "Zachary Klouchnikov and Hannah Semple"
 
-# HEADER
+# This file provides our answers to Q2 of Lab06 for PHY407. We modelled the motion of the floors of a building using
+# Verlet's method as well as by finding the normal modes.
 
 """
 IMPORTS
