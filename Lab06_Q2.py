@@ -110,7 +110,7 @@ t, x_3, v_3 = verlet(N, dt, cycles, x0, v0)  #time, position, velocity values
 
 #floor motion of a building with 10 floors
 N = 10  #number of floors
-x0 = np.array([0., 0., 0., 0,0,0,0,0,0,0])  #initial position values in m
+x0 = np.array([0.1, 0., 0., 0,0,0,0,0,0,0])  #initial position values in m
 v0 = np.array([0., 0., 0., 0,0,0,0,0,0,0])  #initial velocity vaalues in m/s
 t, x_10, v_10 = verlet(N, dt, cycles, x0, v0)  #time, position, velocity values
 
